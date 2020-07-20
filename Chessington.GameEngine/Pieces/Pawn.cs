@@ -3,12 +3,14 @@ using System.Linq;
 
 namespace Chessington.GameEngine.Pieces
 {
+    //Below we are declaring that this is the Pawn Class which is defined in Piece
     public class Pawn : Piece
     {
         public Pawn(Player player) 
             : base(player) { }
 
         //The below method is trying to return a list of all the possible moves you can make with a pawn.
+        // This will be specific to a certain square
         public override IEnumerable<Square> GetAvailableMoves(Board board)
         {
            return new List<Square>

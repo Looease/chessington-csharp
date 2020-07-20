@@ -9,7 +9,7 @@ namespace Chessington.GameEngine.Tests.Pieces
     {
         [Test]
         // This test is testing whether a piece on square 4 can move to square 3
-        // It is testing taht 3, 0 is a valid move for this pawn
+        // It is testing that 3, 0 is a valid move for this pawn
         //The reason is is testing if this works is because we hardcoded that in on Pawn.CS.
         public void WhitePawns_CanMoveOneSquareUp()
         {
