@@ -4,6 +4,7 @@ using System.Linq;
 namespace Chessington.GameEngine.Pieces
 {
     //Below we are declaring that this is the Pawn Class which is defined in Piece
+    // Piece is the PARENT of the pawn class
     public class Pawn : Piece
     {
         public Pawn(Player player) 
@@ -13,11 +14,18 @@ namespace Chessington.GameEngine.Pieces
         // This will be specific to a certain square
         public override IEnumerable<Square> GetAvailableMoves(Board board)
         {
-           return new List<Square>
-           {
-            Square.At(3, 0),
-            Square.At(5, 0)
-           };
+            if (Player == Player.Black)
+            {
+               return new List<Square>
+               {
+                Square.At(5,0)            
+               };
+            }
+            return new List<Square>
+            {
+                Square.At(3,0)
+            };
+
         } 
     }
 }

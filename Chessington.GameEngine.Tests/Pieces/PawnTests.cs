@@ -23,6 +23,7 @@ namespace Chessington.GameEngine.Tests.Pieces
             moves.Should().Contain(Square.At(3, 0));
         }
 
+        //This test is doing the same  as above but with black pawns
         [Test]
         public void BlackPawns_CanMoveOneSquareDown()
         {
@@ -35,6 +36,8 @@ namespace Chessington.GameEngine.Tests.Pieces
             moves.Should().Contain(Square.At(5, 0));
         }
         
+
+        //This test is to determine that white pawns cannot move backwards.
         [Test]
         public void WhitePawns_CannotMoveBackwards()
         {
